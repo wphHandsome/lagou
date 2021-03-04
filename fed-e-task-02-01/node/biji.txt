@@ -1,0 +1,47 @@
+工程化
+1脚手架工具开发
+2自动化构建系统
+3模块化打包
+4项目代码规范化
+5自动化部署
+
+
+脚手架的本质作用：创建项目的基础结构、提供项目规范和约定（相同的结构、相同的开发范式、模块依赖、工具配置、基础代码）
+
+yeoman基本使用
+全局安装yo
+node i yo -generator 
+安装对应的generator
+npm i generator-node -g
+启动
+yo node
+
+SubGenerator
+yo node:cli
+
+使用yeoman
+1明确需求
+2找到合适的Generator
+3全局范围安装找到的Generator
+4通过Yo运行对应的Generator
+5通过命令行交互填写对应选项
+6生成你所需的项目结构
+
+使用plop
+1将plop模块作为项目开发依赖安装
+2在项目根目录下创建一个plopfile.js文件
+3在plopfile.js文件定义脚手架任务
+4编写用于生成特定类型文件的模板
+5通过plop提供的cli运行脚手架任务
+
+脚手架的工作原理
+
+require走的main
+important走的module
+require('..')上级目录去找js
+
+CLI的作用
+1.解析CLI参数的process.argv
+2.调用模块中功能实现
+
+Gulp

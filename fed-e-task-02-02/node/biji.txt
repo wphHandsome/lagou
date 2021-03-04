@@ -1,0 +1,86 @@
+工程化
+1脚手架工具开发
+2自动化构建系统
+3模块化打包
+4项目代码规范化
+5自动化部署
+
+
+脚手架的本质作用：创建项目的基础结构、提供项目规范和约定（相同的结构、相同的开发范式、模块依赖、工具配置、基础代码）
+
+yeoman基本使用
+全局安装yo
+node i yo -generator 
+安装对应的generator
+npm i generator-node -g
+启动
+yo node
+
+SubGenerator
+yo node:cli
+
+使用yeoman
+1明确需求
+2找到合适的Generator
+3全局范围安装找到的Generator
+4通过Yo运行对应的Generator
+5通过命令行交互填写对应选项
+6生成你所需的项目结构
+
+使用plop
+1将plop模块作为项目开发依赖安装
+2在项目根目录下创建一个plopfile.js文件
+3在plopfile.js文件定义脚手架任务
+4编写用于生成特定类型文件的模板
+5通过plop提供的cli运行脚手架任务
+
+脚手架的工作原理
+
+require走的main
+important走的module
+require('..')上级目录去找js
+
+CLI的作用
+1.解析CLI参数的process.argv
+2.调用模块中功能实现
+
+Gulp
+
+
+ESmodule存在的问题
+1、环境兼容问题
+2、模块文件过多，网络请求频繁
+
+模块化工具的作用
+1、解决的是前端整体的模块化，并不单指JavaScript模块化
+
+webpack
+loader是从后往前执行
+小文件使用Data URLs，减少请求次数
+大文件单独提取存放，提高加载速度
+
+.map文件
+sourceMap解决了打包过后的代码与原代码不一致
+逆向解析找到源代码
+注释：//#sourceMappingURL=jquery.min.map(文件名)
+
+webpack配置sourceMap
+属性devtool：'sourceMap'
+效率快，效果不好，效果好的速率慢
+eval模式，不会生成sourceMap，不知道具体的行列信息，速度最快
+
+HMR（热更新）
+开启HMR
+devServer：{
+    hot:true 
+}
+插件：webpack自带
+new webpack.HotModuleReplacementPlugin()
+样式热更新就好了，使用框架的项目，也可以
+没有使用框架，js的热更新需要手动处理,
+
+module.hot.accept(
+    './abb.js(文件地址)'，（）=>{
+        //做处理
+    }
+)
