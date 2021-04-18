@@ -1,9 +1,43 @@
 [
   {
-    "name": "index",
     "path": "/",
-    "component": "/Users/wangpenghe/Desktop/lagou/fed-e-task-03-03/nuxtcode/pages/index.vue",
-    "chunkName": "pages/index",
-    "_name": "_2f2cac4f"
+    "component": "/Users/wangpenghe/Desktop/lagou/fed-e-task-03-03/nuxtcode/pages/layout",
+    "children": [
+      {
+        "path": "",
+        "name": "home",
+        "component": "/Users/wangpenghe/Desktop/lagou/fed-e-task-03-03/nuxtcode/pages/home"
+      },
+      {
+        "path": "/login",
+        "name": "login",
+        "component": "/Users/wangpenghe/Desktop/lagou/fed-e-task-03-03/nuxtcode/pages/login"
+      },
+      {
+        "path": "/register",
+        "name": "register",
+        "component": "/Users/wangpenghe/Desktop/lagou/fed-e-task-03-03/nuxtcode/pages/login"
+      },
+      {
+        "path": "/profile/:username",
+        "name": "profile",
+        "component": "/Users/wangpenghe/Desktop/lagou/fed-e-task-03-03/nuxtcode/pages/profile"
+      },
+      {
+        "path": "/settings",
+        "name": "settings",
+        "component": "/Users/wangpenghe/Desktop/lagou/fed-e-task-03-03/nuxtcode/pages/settings"
+      },
+      {
+        "path": "/editor",
+        "name": "editor",
+        "component": "/Users/wangpenghe/Desktop/lagou/fed-e-task-03-03/nuxtcode/pages/editor"
+      },
+      {
+        "path": "/article/:slug",
+        "name": "article",
+        "component": "/Users/wangpenghe/Desktop/lagou/fed-e-task-03-03/nuxtcode/pages/article"
+      }
+    ]
   }
 ]
