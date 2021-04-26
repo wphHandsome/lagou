@@ -53,3 +53,80 @@ export const getComments = slug => {
     url: `/api/articles/${slug}/comments`
   })
 }
+//发表文章
+export const setarticles = data => {
+  return request({
+    method: 'POST',
+    url: `/api/articles`,
+    data
+  })
+}
+
+//评论文章
+export const setarticle = (slug,data) => {
+  return request({
+    method: 'POST',
+    url: `/api/articles/${slug}/comments`,
+    data
+  })
+}
+
+// 删除文章评论
+export const deleteComment = data => {
+  return request({
+      method: 'DELETE',
+      url: `/api/articles/${data.slug}/comments/${data.id}`
+  })
+}
+
+// 获取个人中心
+export const getProfile = username => {
+  return request({
+      method: 'GET',
+      url: `/api/profiles/${username}`
+  })
+}
+
+
+// 关注用户
+export const followUser = username => {
+  return request({
+      method: 'POST',
+      url: `/api/profiles/${username}/follow`
+  })
+}
+
+// 取消关注用户
+export const unFollowUser = username => {
+  return request({
+      method: 'DELETE',
+      url: `/api/profiles/${username}/follow`
+  })
+}
+
+
+// 编辑文章
+export const editArticle = params => {
+  return request({
+      method: 'PUT',
+      url: `/api/articles/${params.slug}`,
+      data: params.data
+  })
+}
+
+// 发表文章
+export const publishArticle = data => {
+  return request({
+      method: 'POST',
+      url: '/api/articles',
+      data
+  })
+}
+
+// 删除文章
+export const deleteArticle = slug => {
+  return request({
+      method: 'DELETE',
+      url: `/api/articles/${slug}`
+  })
+}
