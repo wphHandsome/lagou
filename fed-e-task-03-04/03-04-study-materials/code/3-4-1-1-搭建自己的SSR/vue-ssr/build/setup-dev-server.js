@@ -8,6 +8,7 @@ const hotMiddleware = require('webpack-hot-middleware')
 const resolve = file => path.resolve(__dirname, file)
 
 module.exports = (server, callback) => {
+  console.log(server,'11')
   let ready
   const onReady = new Promise(r => ready = r)
 
