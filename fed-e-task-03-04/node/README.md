@@ -37,4 +37,4 @@
 
 # 安装依赖 -D是开发依赖，-W 是安装工作区的根目录中
 
-# rimraf依赖可以删除指定文件
+# rimraf依赖可以删除指定文件夹  在package.json 配置del命令，执行yarn workspaces run del (一般用于多组件开发)
