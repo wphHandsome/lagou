@@ -42,7 +42,7 @@
 
     const obj = {
       get foo() {
-        console.log(this)
+        console.log(this,'1111')
         return this.bar
       }
     }
@@ -52,6 +52,7 @@
         if (key === 'bar') { 
           return 'value - bar' 
         }
+        console.log(target, key, receiver,'target, key, receiver')
         return Reflect.get(target, key, receiver)
       }
     })

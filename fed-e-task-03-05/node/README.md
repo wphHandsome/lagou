@@ -26,9 +26,14 @@
  * vite 生产环境使用Rollup打包（基于ES Module的方式） 
 
 # setup函数是 Composition API（组合API）的入口
+  * setup 这个函数是在beforeCreate和created之前运行的,所以你可以用它来代替这两个钩子函数。
   * 在setup函数中定义的变量和方法最后都是需要 return 出去的 不然无法再模板中使用
   * data() 变为 setUp()
   * 生命周期的函数只能写在setUp中
   * provide/inject 只能写在setUp
+
+# trim方法去除前后空格
+
+# vue双击按钮显示相应内容 ，@dblclick=“事件名”
 
 
