@@ -8,6 +8,7 @@ export function reactive (target) {
 
   const handler = {
     get (target, key, receiver) {
+      console.log(receiver,'recad222222')
       // 收集依赖
       track(target, key)
       const result = Reflect.get(target, key, receiver)
@@ -47,8 +48,10 @@ export function effect (callback) {
 let targetMap = new WeakMap()
 
 export function track (target, key) {
+  console.log(target,key,'new Set()111')
   if (!activeEffect) return
   let depsMap = targetMap.get(target)
+  console.log(depsMap,'depsda22221111199999')
   if (!depsMap) {
     targetMap.set(target, (depsMap = new Map()))
   }
@@ -60,9 +63,11 @@ export function track (target, key) {
 }
 
 export function trigger (target, key) {
+  console.log(targetMap,'11111111111')
   const depsMap = targetMap.get(target)
   if (!depsMap) return
   const dep = depsMap.get(key)
+  console.log(dep,'1depsssssssss')
   if (dep) {
     dep.forEach(effect => {
       effect()

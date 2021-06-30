@@ -9,3 +9,7 @@ const abb ={
 const {a,...b} = abb
 
 console.log(b)
+
+const addb = new Set([1,23,2])
+addb.add([1,2])
+console.log(addb,'111')

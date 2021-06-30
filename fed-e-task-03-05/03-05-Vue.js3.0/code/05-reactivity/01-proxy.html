@@ -49,7 +49,7 @@
 
     const proxy = new Proxy(obj, {
       get (target, key, receiver) {
-        if (key === 'bar') { 
+        if (key === 'bar') {
           return 'value - bar' 
         }
         console.log(target, key, receiver,'target, key, receiver')

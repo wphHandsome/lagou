@@ -36,4 +36,15 @@
 
 # vue双击按钮显示相应内容 ，@dblclick=“事件名”
 
+# ref和reactive的区别
+ * ref可以把基本数据类型转换成响应式数据
+ * ref返回的对象，重新赋值成对象也是响应式的
+ * reactive返回的对象，重新赋值丢失响应式
+ * reactive返回的对象不可以结构
 
+# WeakMap和Map的区别
+  * 如果是普通的值类型则不允许。比如：字符串，数字，null，undefined，布尔类型。而Map结构是允许的，这就是两者的不同之处，谨记。
+  * 跟Map一样，WeakMap也拥有get、has、delete方法，用法和用途都一样。不同地方在于，WeakMap不支持clear方法，不支持遍历，也就没有了keys、values、entries、forEach这4个方法，也没有属性size。
+  * 键名中的引用类型是弱引用，你永远不知道这个引用对象什么时候会被垃圾回收机制回收了，如果这个引用类型的值被垃圾机制回收了，WeakMap实例中的对应键值对也会消失。
+
+# instanceof 运算符用来测试一个对象在其原型链中是否存在一个构造函数的 prototype 属性。

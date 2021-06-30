@@ -19,3 +19,15 @@
 #    console.log('red');
 #  }
 # }
+
+# 接口代理配置
+# proxyTable: {
+    '/api': {// '/api':匹配项
+        target: 'http://192.168.10.183:8103',// 接口的域名
+　　　　 // secure: false,// 如果是https接口，需要配置这个参数
+        changeOrigin: true,// 如果接口跨域，需要进行这个参数配置
+　　　　　// pathRewrite: {// 如果接口本身没有/api需要通过pathRewrite来重写了地址
+　　　　　//   '^api': ''
+        // }
+    }
+# }
