@@ -1,4 +1,6 @@
 # lagou
+
+# github的令牌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
 学习
 * 多重判断时使用 Array.includes
 * 更少的嵌套，尽早 return
