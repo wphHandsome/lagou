@@ -9,3 +9,5 @@ app.component('reading',{
         )
     }
 })
+
+console.log(creatApp,'11')

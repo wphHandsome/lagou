@@ -106,3 +106,6 @@ post 不同，post 做的一般是修改和删除的工作，所以必须与数�
 执行工程自身生命周期
 当前 npm 工程如果定义了钩子此时会被执行（按照 install、postinstall、prepublish、prepare 的顺序）。
 最后一步是生成或更新版本描述文件，npm install 过程完成。
+
+
+# DNS预解析
