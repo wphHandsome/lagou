@@ -1,6 +1,6 @@
 lagou
 
-# github wphHandsome 的令牌 
+#### github wphHandsome 的令牌 
 * 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
 * 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
 * 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
@@ -15,7 +15,7 @@ lagou
 - 倾向于遍历对象而不是 Switch 语句
 - 对 所有/部分 判断使用 Array.every & Array.some
 
-# 例子
+#### 例子
 
 function test(fruit) {
 if (fruit == 'apple' || fruit == 'strawberry') {
@@ -30,7 +30,7 @@ console.log('red');
 }
 }
 
-# 接口代理配置
+#### 接口代理配置
 
 proxyTable: {
 '/api': {// '/api':匹配项
@@ -43,7 +43,7 @@ changeOrigin: true,// 如果接口跨域，需要进行这个参数配置
 }
 }
 
-# get 请求传参长度的误区、get 和 post 请求在缓存方面的区别
+#### get 请求传参长度的误区、get 和 post 请求在缓存方面的区别
 
 误区：我们经常说 get 请求参数的大小存在限制，而 post 请求的参数大小是无限制的。
 参考答案
@@ -56,7 +56,7 @@ GET 的最大长度显示是因为 浏览器和 web 服务器限制了 URI 的�
 get 请求类似于查找的过程，用户获取数据，可以不用每次都与数据库连接，所以可以使用缓存。
 post 不同，post 做的一般是修改和删除的工作，所以必须与数据库交互，所以不能使用缓存。因此 get 请求适合于请求缓存。
 
-# npm 模块安装机制，为什么输入 npm install 就可以自动安装对应的模块？
+#### npm 模块安装机制，为什么输入 npm install 就可以自动安装对应的模块？
 
 参考答案
 
@@ -110,4 +110,4 @@ post 不同，post 做的一般是修改和删除的工作，所以必须与数�
 最后一步是生成或更新版本描述文件，npm install 过程完成。
 
 
-# DNS预解析
+#### DNS预解析
