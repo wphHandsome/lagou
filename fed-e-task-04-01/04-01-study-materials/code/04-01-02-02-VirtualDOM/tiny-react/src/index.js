@@ -90,12 +90,12 @@ class Alert extends TinyReact.Component {
   }
 }
 
-// TinyReact.render(<Alert name="张三" age={20} />, root)
+TinyReact.render(<Alert name="张三" age={20} />, root)
 
-// setTimeout(() => {
-//   TinyReact.render(<Alert name="李四" age={50} />, root)
-//   // TinyReact.render(<Heart title="我是Heart组件" />, root)
-// }, 2000)
+setTimeout(() => {
+  TinyReact.render(<Alert name="李四" age={50} />, root)
+  // TinyReact.render(<Heart title="我是Heart组件" />, root)
+}, 2000)
 
 class DemoRef extends TinyReact.Component {
   constructor(props) {
@@ -157,6 +157,8 @@ class KeyDemo extends TinyReact.Component {
     // newState.persons.splice(1, 0, { id: 100, name: "李逵" })
     newState.persons.pop()
     this.setState(newState)
+    const p = document.getElementsByTagName('ul')
+    console.log(p,'11122')
   }
   render() {
     return (

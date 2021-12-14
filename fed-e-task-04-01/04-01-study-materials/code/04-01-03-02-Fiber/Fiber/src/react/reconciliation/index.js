@@ -21,7 +21,8 @@ let pendingCommit = null
 const commitAllWork = fiber => {
   /**
    * 循环 effets 数组 构建 DOM 节点树
-   */
+   */console.log(fiber,'11')
+
   fiber.effects.forEach(item => {
     if (item.tag === "class_component") {
       item.stateNode.__fiber = item

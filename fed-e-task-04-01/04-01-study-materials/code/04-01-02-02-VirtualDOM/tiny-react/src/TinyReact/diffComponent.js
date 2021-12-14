@@ -17,5 +17,7 @@ export default function diffComponent(
 }
 // 判断是否是同一个组件
 function isSameComponent(virtualDOM, oldComponent) {
+  console.log(virtualDOM,'oldComponent211')
+  console.log(oldComponent,'222')
   return oldComponent && virtualDOM.type === oldComponent.constructor
 }
